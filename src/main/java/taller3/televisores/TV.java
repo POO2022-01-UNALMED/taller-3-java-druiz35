@@ -15,7 +15,6 @@ public class TV {
 		this.precio = 500;
 		this.estado = estado;
 		this.volumen = 1;
-		this.estado = false;
 		TV.numTV++;
 	}
 	        
@@ -44,7 +43,7 @@ public class TV {
 	}
 	
 	public void setCanal(int nCanal) {
-		this.canal = nCanal;
+		if (nCanal >= 1 && nCanal <= 120) this.canal = nCanal;
 	}
 	
 	public void setPrecio(int nPrecio) {
@@ -52,7 +51,7 @@ public class TV {
 	}
 
 	public void setVolumen(int nVolumen) {
-		this.volumen = nVolumen;
+		if (nVolumen <= 7 && nVolumen >= 0) this.volumen = nVolumen;
 	}
 	
 	public void setControl(Control nControl) {
